@@ -1,0 +1,189 @@
+/Asssignment 4
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        // Question 1: Print Numbers from 1 to N 
+        System.out.print("Enter a number: ");
+        int num1 = sc.nextInt();
+        for (int i = 1; i <= num1; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        
+        // Question 2: Print Multiples of 3 between 1 and N 
+        System.out.print("Enter a number: ");
+        int num2 = sc.nextInt();
+        for (int i = 1; i <= num2; i++) {
+            if (i % 3 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+        
+        // Question 3: Factorial
+        System.out.print("Enter a number: ");
+        int num3 = sc.nextInt();
+        int res3 = 1;
+        for (int i = num3; i > 1; i--) {
+            res3 *= i;
+        }
+        System.out.println("Factorial of " + num3 + " is " + res3);
+        
+        // Question 4: Even Numbers
+        System.out.print("Enter a number: ");
+        int num4 = sc.nextInt();
+        for (int i = 2; i <= num4; i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+        
+        // Question 5: Sum of Odd Numbers
+        int Sum5 = 0;
+        System.out.print("Enter a number: ");
+        int num5 = sc.nextInt();
+        
+        for (int i = 1; i <= num5; i++) {
+            if (i % 2 != 0) {
+                Sum5 += i;
+            }
+        }
+        
+        System.out.println("Sum of odd numbers: " + Sum5);
+        
+                
+        // Question 6: Print All Elements of an Array
+        int[] arr6 = new int[5];
+        System.out.print("Enter 5 integers: ");
+        for(int i = 0; i < 5; i++){
+            arr6[i] = sc.nextInt();
+        }
+        for(int i = 0; i < 5; i++){
+            System.out.print(arr6[i] + " ");
+        }
+        System.out.println();
+        
+        
+        // Question 7: Find the Sum of All Elements in an Array
+        int sum7 = 0;
+        for(int i = 0; i < 5; i++){
+            sum7 += arr6[i];
+        }
+        System.out.println("The sum of all numbers is: " + sum7);
+        
+        
+        // Question 8: Print All Names in a String Array
+        String[] names8 = new String[4];
+        System.out.print("Enter 4 names: ");
+        for(int i = 0; i < 4; i++){
+            names8[i] = sc.next();
+        }
+        for(int i = 0; i < 4; i++){
+            System.out.println(names8[i]);
+        }
+        
+        
+        // Question 9: Find the Largest Element in an Array
+        int max9 = arr6[0];
+        for(int i = 1; i < 5; i++){
+            if(arr6[i] > max9){
+                max9 = arr6[i];
+            }
+        }
+        System.out.println("The largest element is: " + max9);
+        
+        
+        // Question 10: Find the Average of Elements in an Array
+        double avg10 = sum7 / 5.0;
+        System.out.println("The average of the numbers is: " + avg10);
+        
+        
+        // Question 11: Count Positive and Negative Numbers in an Array
+        int[] arr11 = new int[6];
+        System.out.print("Enter 6 integers: ");
+        for(int i = 0; i < 6; i++){
+            arr11[i] = sc.nextInt();
+        }
+        
+        int pos11 = 0, neg11 = 0;
+        for(int i = 0; i < 6; i++){
+            if(arr11[i] > 0){
+                pos11++;
+            } else if(arr11[i] < 0){
+                neg11++;
+            }
+        }
+        System.out.println("Positive numbers: " + pos11);
+        System.out.println("Negative numbers: " + neg11);
+        
+        
+        // Question 12: Sort an Array in Ascending Order
+        Arrays.sort(arr6);
+        System.out.print("Sorted array: ");
+        for(int i = 0; i < 5; i++){
+            System.out.print(arr6[i] + " ");
+        }
+        System.out.println();
+        
+        
+        // Question 13: Check if an Array Contains a Specific Element
+        System.out.print("Enter number to search: ");
+        int key13 = sc.nextInt();
+        
+        boolean found13 = false;
+        for(int i = 0; i < 5; i++){
+            if(arr6[i] == key13){
+                found13 = true;
+                break;
+            }
+        }
+        
+        if(found13){
+            System.out.println("Found");
+        } else {
+            System.out.println("Not Found");
+        }
+        
+        
+        // Question 14: Find the Index of an Element in an Array
+        int index14 = Arrays.binarySearch(arr6, key13);
+        
+        if(index14 >= 0){
+            System.out.println("The number " + key13 + " is found at index " + index14);
+        } else {
+            System.out.println("Not Found");
+        }
+	
+	Question 15:Write a program to print the following pattern:
+
+	int num = 5;
+
+        // Normal pattern
+        for(int i = 1; i <= num; i++){
+            for(int j = 1; j <= i; j++){
+                System.out.print(i);
+                if(j < i){
+                    System.out.print("*"); 
+                }
+            }
+            System.out.println();
+        }
+
+        // Inverted pattern
+        for(int i = num; i >= 1; i--) {
+            for(int j = 1; j <= i; j++) {
+                System.out.print(i);
+                if(j < i) {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+	
+	Question 16: Write a program to print the following pattern:
