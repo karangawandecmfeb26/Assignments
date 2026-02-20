@@ -1,0 +1,91 @@
+//Assignment 3:
+
+import java.util.Scanner;
+
+class Main {
+
+    public static void sumOfTwoNumbers(int a, int b){
+        System.out.println("The sum of " + a + " and " + b + " is " + (a + b));
+    }
+    
+    public static void checkAgeCategory(int age){
+        if(age < 18){
+            System.out.println("You are a minor");
+        }
+        else if(age <= 50){
+            System.out.println("You are an Adult");
+        }
+        else{
+            System.out.println("You are a Senior citizen");
+        }
+    }
+    
+    public static void printEvenNumbers(int n){
+        int i = 1;
+        while(i <= n){
+            if(i % 2 == 0){
+                System.out.print(i + " ");
+            }
+            i++;
+        }
+        System.out.println();
+    }
+    
+    public static void askForPositiveNumber(Scanner sc){
+        int p;
+        do{
+            System.out.print("Enter a positive Number: ");
+            p = sc.nextInt();
+        } while(p <= 0);
+
+        System.out.println("You entered a positive number: " + p);
+    }
+    
+    public static void printMultiplicationTable(int n){
+        for(int i = 1; i <= 10; i++){
+            System.out.println(n + " x " + i + " = " + (n * i));
+        }
+    }
+    
+    public static void calculateSum(int n){
+        int sum = 0;
+        for (int i = 1; i <= n; i++){
+            sum += i;
+        }
+        System.out.println("The sum of numbers from 1 to " + n + " is: " + sum);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Problem 1
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+        sumOfTwoNumbers(a, b);
+
+        // Problem 2
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+        checkAgeCategory(age);
+
+        // Problem 3
+        printEvenNumbers(50);
+
+        // Problem 4
+        askForPositiveNumber(sc);
+
+        // Problem 5
+        System.out.print("Enter a number for table: ");
+        int num = sc.nextInt();
+        printMultiplicationTable(num);
+
+        // Problem 6
+        System.out.print("Enter a number: ");
+        int no = sc.nextInt();
+        calculateSum(no);
+
+        sc.close();
+    }
+}
