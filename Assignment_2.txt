@@ -1,0 +1,86 @@
+//Assignment 2:
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        //Problem 1:
+        int Maths = sc.nextInt();
+        int Science = sc.nextInt();
+        int History = sc.nextInt();
+        
+        int Marks = (Maths + Science + History) / 3;
+        System.out.println("Avg Marks: "+Marks);
+        if (Marks >= 90) {
+            System.out.println("Grade: A");
+        } else if (Marks >= 70) {
+            System.out.println("Grade: B");
+        } else if (Marks >= 50) {
+            System.out.println("Grade: C");
+        } else if (Marks >= 30) {
+            System.out.println("Grade: D");
+        } else {
+            System.out.println("Fail");
+        }
+        
+        //Problem 2:
+        int Year=sc.nextInt();
+        if((Year%4==0 && Year%100!=0) || Year%400==0){
+            System.out.println(Year+ " is a Leap Year");
+            
+        }
+        else{
+            System.out.println(Year + " is not a Leap Year");
+        }
+        
+        //Problem 3:
+        int Day=sc.nextInt();
+        switch(Day){
+            case 1:
+                System.out.println("The day is Monday");
+                break;
+            case 2:
+                System.out.println("The day is Tuesday");
+                break;
+            case 3:
+                System.out.println("The day is Wednesday");
+                break;
+            case 4:
+                System.out.println("The day is Thursday");
+                break;
+            case 5:
+                System.out.println("The day is Friday");
+                break;
+            case 6:
+                System.out.println("The day is Saturday");
+                break;
+            case 7:
+                System.out.println("The day is Sunday");
+                break;
+            default:
+                System.out.println("Invalid day number");
+                
+        }
+        
+        //Problem 4:
+        byte a=0; 
+        short b=0; 
+        int c=0; 
+        long d=0l; 
+        float e=0.0f; 
+        double f=0.0; 
+        char g='A'; 
+        boolean h=true;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+        System.out.println(e);
+        System.out.println(f);
+        System.out.println(g);
+        System.out.println(h);
+    }
+}
+
