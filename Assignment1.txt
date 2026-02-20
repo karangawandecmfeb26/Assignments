@@ -3,7 +3,9 @@
 
 //1. Check Positive Number
 
-
+/*START → Set number → number > 0 ? → Yes → Print "Positive" → END
+                                 → No  → Print "Not Positive" → END
+*/
 int num1 = 5;
 
 if(num1 > 0){
@@ -14,7 +16,9 @@ if(num1 > 0){
 
 //2. Check Negative Number
 
-
+/*START → Set number → number < 0 ? → Yes → Print "Negative" → END
+                                 → No  → Print "Not Negative" → END
+*/
 int num2 = -3;
 
 if(num2 < 0){
@@ -26,7 +30,9 @@ if(num2 < 0){
 
 //3. Check Odd or Even
 
-
+/*START → Set number → number % 2 == 0 ? → Yes → Print "Even" → END
+                                      → No  → Print "Odd" → END
+*/
 int num3 = 7;
 
 if(num3 % 2 == 0){
@@ -38,6 +44,9 @@ if(num3 % 2 == 0){
 
 //4. Good Morning Based on Time
 
+/*START → Set time → (time >= 5 AND time < 12) ? → Yes → Print "Good Morning" → END
+                                               → No  → Print "Not Morning" → END
+*/
 int time4 = 8;
 
 if(time4 >= 5 && time4 <= 12){
@@ -46,6 +55,10 @@ if(time4 >= 5 && time4 <= 12){
 
 
 //5. Area of Square
+
+/*START → Set side → area = side * side → Print area → END
+
+*/
 int side5 = 4;
 int area5 = side5 * side5;
 
@@ -54,7 +67,8 @@ System.out.println("Area of square: " + area5);
 
 //6. Area of Rectangle
 
-
+/*START → Set length, width → area = length * width → Print area → END
+*/
 int length6 = 5;
 int width6 = 3;
 int area6 = length6 * width6;
@@ -64,7 +78,11 @@ System.out.println("Area of rectangle: " + area6);
 
 //7. Largest of Three Numbers
 
+/*START → Set a, b, c → (a > b AND a > c) ? → Yes → Print "a largest" → END
+                                          → No → (b > a AND b > c) ? → Yes → Print "b largest" → END
+                                                                     → No  → Print "c largest" → END
 
+*/
 int a7 = 10, b7 = 25, c7 = 15;
 
 if(a7 >= b7 && a7 >= c7){
