@@ -1,0 +1,78 @@
+//Assignment 1
+
+
+//1. Check Positive Number
+
+
+int num1 = 5;
+
+if(num1 > 0){
+    System.out.println("Number is Positive");
+} else {
+    System.out.println("Number is Not Positive");
+}
+
+//2. Check Negative Number
+
+
+int num2 = -3;
+
+if(num2 < 0){
+    System.out.println("Number is Negative");
+} else {
+    System.out.println("Number is Not Negative");
+}
+
+
+//3. Check Odd or Even
+
+
+int num3 = 7;
+
+if(num3 % 2 == 0){
+    System.out.println("Even Number");
+} else {
+    System.out.println("Odd Number");
+}
+
+
+//4. Good Morning Based on Time
+
+int time4 = 8;
+
+if(time4 >= 5 && time4 <= 12){
+    System.out.println("Good Morning");
+}
+
+
+//5. Area of Square
+int side5 = 4;
+int area5 = side5 * side5;
+
+System.out.println("Area of square: " + area5);
+
+
+//6. Area of Rectangle
+
+
+int length6 = 5;
+int width6 = 3;
+int area6 = length6 * width6;
+
+System.out.println("Area of rectangle: " + area6);
+
+
+//7. Largest of Three Numbers
+
+
+int a7 = 10, b7 = 25, c7 = 15;
+
+if(a7 >= b7 && a7 >= c7){
+    System.out.println("Largest is: " + a7);
+}
+else if(b7 >= a7 && b7 >= c7){
+    System.out.println("Largest is: " + b7);
+}
+else{
+    System.out.println("Largest is: " + c7);
+}
