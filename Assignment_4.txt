@@ -1,4 +1,4 @@
-/Asssignment 4
+//Asssignment 4
 
 import java.util.Scanner;
 
@@ -186,4 +186,178 @@ class Main {
             System.out.println();
         }
 	
-	Question 16: Write a program to print the following pattern:
+	//Question 16:Write a program to print the following pattern:
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(i);
+                if(j<i){
+                  System.out.print("*"); 
+                }
+            }
+            System.out.println();
+        }
+        
+        //Question 17: Write a program to print the following pattern:
+        
+        for(int i = 1; i < 10; i++) {
+            if(i % 2 != 0) {
+
+                for(int j = 1; j <= i; j += 2) {
+                    System.out.print(j);
+
+                    if(j < i) {
+                        System.out.print("*");
+                    }
+                }
+                System.out.println();
+            }
+        }
+	
+	 //Question 18: Write a program to print the following pattern: 
+        
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=5;j++){
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+        
+        // Question 19:
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(i);
+            }
+        System.out.println();
+        }
+        
+        //Question 20:
+         for(int i=1;i<=5;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(j);
+            }
+        System.out.println();
+        }
+        
+        //Question 21:
+        int Count=1;
+        for(int i=1;i<=5;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(Count+" ");
+                Count++;
+            }
+            System.out.println();
+        }
+	
+	//Question 22:
+       for(int i=0;i<=5;i++){
+           for(int j=0; j<=5;j++){
+               if(i==0 || j==0 ||i==5 || j==5){
+                   System.out.print("*");
+               }
+               else{
+                   System.out.print(" ");
+               }
+           }
+           System.out.println();
+       }
+       
+	 //Question 23:
+        
+        int n = 5;
+        for(int i = 1; i <= n; i++) {
+            for(int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            for(int j = 1; j <= (2*i - 1); j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+        for(int i = n; i >= 1; i--) {
+            for(int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+
+            for(int j = 1; j <= (2*i - 1); j++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+	// Question 24: Reverse a String
+        System.out.print("Enter a string: ");
+        String str24 = sc.next();
+        String rev24 = "";
+        
+        for(int i = str24.length() - 1; i >= 0; i--){
+            rev24 += str24.charAt(i);
+        }
+        System.out.println("Reversed string: " + rev24);
+        
+        
+        // Question 25: Count Vowels in a String
+        int count25 = 0;
+        for(int i = 0; i < str24.length(); i++){
+            char ch25 = str24.charAt(i);
+            if(ch25=='a' || ch25=='e' || ch25=='i' || ch25=='o' || ch25=='u' ||
+               ch25=='A' || ch25=='E' || ch25=='I' || ch25=='O' || ch25=='U'){
+                count25++;
+            }
+        }
+        System.out.println("The number of vowels in '" + str24 + "' is: " + count25);
+        
+        
+        // Question 26: Check if a String is a Palindrome
+        if(str24.equals(rev24)){
+            System.out.println("The string '" + str24 + "' is a palindrome.");
+        } else {
+            System.out.println("The string '" + str24 + "' is not a palindrome.");
+        }
+        
+        
+        // Question 27: String Literal and Object Creation
+        String str27a = "hello";
+        String str27b = "hello";
+        
+        System.out.println("Both variables point to the same object: " + (str27a == str27b));
+        
+        
+        // Question 28: String Creation with new Keyword
+        String str28a = new String("hello");
+        String str28b = new String("hello");
+        
+        System.out.println("Using == : " + (str28a == str28b));
+        System.out.println("Using .equals(): " + str28a.equals(str28b));
+        
+        
+        // Question 29: String Concatenation and Object Creation
+        String str29a = "hello";
+        String str29b = "world";
+        String str29c = str29a + str29b;
+        
+        System.out.println("Is str29c pointing to the same object as str29a? " + (str29c == str29a));
+        
+        
+        // Question 30: String Pool with intern() Method
+        String str30a = new String("hello");
+        String str30b = str30a.intern();
+        String str30c = "hello";
+        
+        System.out.println("Is str30b and str30c pointing to the same object? " + (str30b == str30c));
+        
+        
+        // Question 31: Multiple String Literals with Same Content
+        String str31a = "java";
+        String str31b = "java";
+        String str31c = "java";
+        
+        boolean result31 = (str31a == str31b) && (str31b == str31c);
+        
+        System.out.println("All strings point to the same object: " + result31);
+
+        sc.close();
+    }
+}
